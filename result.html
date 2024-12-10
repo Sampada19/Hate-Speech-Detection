@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center text-primary">Prediction Result</h1>
+        <div class="card shadow p-4">
+            <p><strong>Input Text:</strong> {{ text }}</p>
+            <h4 class="text-secondary">Detected Categories:</h4>
+            {% if results %}
+            <ul class="list-group mt-3">
+                {% for label in results %}
+                <li class="list-group-item">{{ label | capitalize }}</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p class="text-success">No categories detected!</p>
+            {% endif %}
+            <a href="/" class="btn btn-secondary btn-block mt-3">Analyze Another Text</a>
+        </div>
+    </div>
+</body>
+</html>

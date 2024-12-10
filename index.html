@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hate Speech Detection</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center text-primary">Hate Speech Detection</h1>
+        <p class="text-center text-muted">Enter text below to check for various toxicity levels.</p>
+        <div class="card shadow p-4">
+            <form action="/predict" method="post">
+                <div class="form-group">
+                    <label for="text">Input Text:</label>
+                    <textarea class="form-control" id="text" name="text" rows="5" placeholder="Type your text here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Analyze</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
